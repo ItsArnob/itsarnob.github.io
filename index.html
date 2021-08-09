@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ItsArnob's Portfolio</title>
+    <meta
+      name="description"
+      content="ItsArnob's portfolio, hopefully he'll keep it updated."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap "
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body class="bg-gradient-to-tr from-gray-700 to-gray-900 text-white">
+    <header
+      id="navbar"
+      class="
+        z-50
+        text-md
+        nav2:text-xl
+        border-b border-opacity-20
+        flex
+        w-full
+        bg-black bg-opacity-20
+        py-2
+        fixed
+        top-0
+        left-0
+        backdrop-filter backdrop-blur-sm
+      "
+    >
+      <a href="#welcome-section" class="ml-4">ItsArnob's Portfolio</a>
+      <nav class="ml-auto">
+        <a
+          href="#projects"
+          class="
+            transition
+            duration-100
+            bg-transparent
+            ml-2
+            rounded
+            nav1:px-2
+            px-1
+            py-1
+            hover:bg-white
+            hover:bg-opacity-30
+          "
+          >Projects</a
+        >
+        <a
+          href="#contacts"
+          class="
+            transition
+            duration-100
+            bg-transparent
+            ml-2
+            mr-2
+            rounded
+            nav1:px-2
+            px-1
+            py-1
+            hover:bg-white
+            hover:bg-opacity-30
+          "
+          >Contacts</a
+        >
+      </nav>
+    </header>
+
+    <section id="welcome-section" class="h-screen flex flex-col items-center">
+      <div class="my-auto">
+        <h1 class="text-4xl heading:text-5xl sm:text-6xl text-center">
+          Hey there, I'm Arnob!
+        </h1>
+        <p class="text-xl sm:text-2xl mt-3 text-center px-2">
+          <em>a 14 year old learning full-stack web development</em>
+        </p>
+      </div>
+      <svg
+        onclick="scrollIntoView(this)"
+        xmlns="http://www.w3.org/2000/svg"
+        class="opacity-40 h-10 w-10 animate-bounce"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M19 9l-7 7-7-7"
+        />
+      </svg>
+    </section>
+    <section
+      id="projects"
+      class="
+        rounded-2xl
+        m-2
+        sm:mx-4 
+        md:mx-6
+        p-2
+        px-5
+        bg-gradient-to-br
+        from-indigo-500
+        to-purple-900
+        shadow-2xl
+      "
+    >
+      <h2 class="text-center mt-4 text-2xl font-semibold heading:text-3xl sm:text-4xl">
+        PROJECTS
+      </h2>
+      <p class="text-center my-4">
+        I've made quite a few webapps, some of them abandoned, some of them
+        actually finished
+        <s>and some of them are so bad i don't even want to put 'em here.</s>
+      </p>
+      <h3
+        class="
+          text-center text-xl
+          heading:text-2xl
+          border-b-2
+          pb-2
+          mb-5
+          border-opacity-30
+        "
+      >
+        These are the finished ones&trade;
+      </h3>
+      <div
+        id="projects-grid" class="grid grid-cols-projects w-full mb-5 gap-10 mx-auto max-w-screen-xl"
+      >
+      
+      </div>
+    </section>
+    <section id="contacts" class="rounded-2xl
+        mx-2
+        sm:mx-4 
+        md:mx-6
+        my-6
+        p-2
+        px-5
+        shadow-2xl
+        bg-gradient-to-br
+        from-green-500
+        to-purple-900"
+       >
+        <h2 class="text-center text-2xl font-semibold heading:text-3xl sm:text-4xl mt-4">CONTACTS</h2>
+        <p class="text-center text-xl my-4"> I dont have many accounts but you can find me over at:</p>
+        <div class="flex justify-center items-center border-b-2 pb-3 border-opacity-30">
+            <a id="profile-link" href="https://www.freecodecamp.org/its_arnob" class="mr-10 transition duration-100 bg-opacity-0 hover:bg-black hover:bg-opacity-30 p-2 rounded-md" target="_blank"><img src="/public/fcc_primary_small.png" class="w-14 mx-auto">its_arnob</a>
+            <a href="https://github.com/itsarnob" class="transition duration-100 bg-opacity-0 hover:bg-black hover:bg-opacity-30 p-2 rounded-md" target="_blank"><img src="/public/gh.png" class="w-10 mx-auto">ItsArnob</a>
+        </div>
+        <h2 class="text-center text-2xl font-semibold heading:text-3xl sm:text-4xl mt-4 mb-4"> SOURCE & CREDITS </h2>
+        <p class="text-center text-xl mb-4"> You can find the source code of this site at <a href="https://github.com/itsarnob/fcc-projects/tree/main/portfolio" class="text-rose-300 underline" target="_blank">this github repo.</a> The arrow & 'open external link' icons are from <a href="https://heroicons.com" class="text-rose-300 underline" target="_blank">Hero Icons.</a></p>        
+    </section>
+    <script>
+      function scrollIntoView(el) {
+        el.scrollIntoView();
+      }
+      function addTile(data) {
+        const template = `
+        
+          <div class="project-tile bg-white bg-opacity-20 rounded-md p-3 flex flex-col shadow-lg">
+          <h4 class="font-semibold text-xl">${data.title}</h4>
+          <p class="mb-2">${data.desc}</p>
+          <div class="flex mt-auto">
+            <a target="_blank" href="${data.openHref}" class="transition duration-100 rounded px-2 py-2 bg-purple-400 hover:bg-opacity-70 hover:ring ring-purple-300 shadow-inner mr-2"
+              >Open
+              <svg
+                class="w-6 inline-block"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"
+                />
+                <path
+                  d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"
+                />
+              </svg>
+            </a>
+            <a
+              href="${data.ghHref}"
+              target="_blank"
+              class="
+                bg-gray-700
+                hover:bg-gray-800
+                hover:ring 
+                hover:ring-gray-300
+                hover:ring-opacity-60
+                transition
+                duration-100
+                flex
+                justify-center
+                items-center
+                w-[130px]
+                rounded
+                py-2
+              "
+            >
+              <img src="/public/gh.png" class="w-6 mr-2" /> GitHub
+              <svg
+                class="w-6 ml-1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"
+                />
+                <path
+                  d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"
+                /></svg
+            ></a>
+          </div>
+        </div>
+        `
+        return template;
+      }
+      const parent = document.getElementById("projects");
+      const data = [
+          {
+              title: 'Steve Jobs\' Tribute.',
+              desc: 'A tribute project made for the free code camp web certification.',
+              openHref: 'https://itsarnob.github.io/fcc-projects/tribute',
+              ghHref: 'https://github.com/itsarnob/fcc-projects/tree/main/tribute'
+          },
+          { 
+              title: 'Fake Developer Survey.',
+              desc: 'A survey project made for the free code camp web certification.',
+              openHref: 'https://itsarnob.github.io/fcc-projects/survey',
+              ghHref: 'https://github.com/itsarnob/fcc-projects/tree/main/survey'
+          },
+          { 
+              title: 'Todo Taskify\'s Landing Page.',
+              desc: 'A landing page made for my todo taskify app, also serves purpose for the free code camp web certification.',
+              openHref: 'https://itsarnob.github.io/fcc-projects/todo-taskify',
+              ghHref: 'https://github.com/itsarnob/fcc-projects/tree/main/todo-taskify'
+          },
+          {
+              title: 'Todo Taskify.',
+              desc: 'A simple todo list app with beautiful UI & smooth transitions.',
+              openHref: 'https://todo-taskify.web.app',
+              ghHref: 'https://github.com/itsarnob/todo-taskify'
+          }
+      ]
+      data.forEach(tile => {
+          document.getElementById('projects-grid').innerHTML += addTile(tile);
+      })
+      
+    </script>
+  </body>
+  <style>
+    html {
+      scroll-behavior: smooth;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    #welcome-section h1,
+    #welcome-section p {
+      background: -webkit-linear-gradient(45deg, #059669, #7c3aed, #be185d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</html>
