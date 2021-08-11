@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,6 +15,19 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/index.css" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      #welcome-section h1,
+      #welcome-section p {
+        background: -webkit-linear-gradient(45deg, #059669, #7c3aed, #be185d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+  </style>
   </head>
   <body class="bg-gradient-to-tr from-gray-700 to-gray-900 text-white">
     <header
@@ -153,8 +166,8 @@
         <h2 class="text-center text-2xl font-semibold heading:text-3xl sm:text-4xl mt-4">CONTACTS</h2>
         <p class="text-center text-xl my-4"> I dont have many accounts but you can find me over at:</p>
         <div class="flex justify-center items-center border-b-2 pb-3 border-opacity-30">
-            <a id="profile-link" href="https://www.freecodecamp.org/its_arnob" class="mr-10 transition duration-100 bg-opacity-0 hover:bg-black hover:bg-opacity-30 p-2 rounded-md" target="_blank"><img src="/public/fcc_primary_small.png" class="w-14 mx-auto">its_arnob</a>
-            <a href="https://github.com/itsarnob" class="transition duration-100 bg-opacity-0 hover:bg-black hover:bg-opacity-30 p-2 rounded-md" target="_blank"><img src="/public/gh.png" class="w-10 mx-auto">ItsArnob</a>
+            <a id="profile-link" href="https://www.freecodecamp.org/its_arnob" class="mr-10 transition duration-100 bg-opacity-0 hover:bg-black hover:bg-opacity-30 p-2 rounded-md" target="_blank"><img src="/public/fcc_primary_small.png" class="w-14 mx-auto" alt="FreeCodeCamp logo">its_arnob</a>
+            <a href="https://github.com/itsarnob" class="transition duration-100 bg-opacity-0 hover:bg-black hover:bg-opacity-30 p-2 rounded-md" target="_blank"><img src="/public/gh.png" class="w-10 mx-auto" alt="GitHub logo">ItsArnob</a>
         </div>
         <h2 class="text-center text-2xl font-semibold heading:text-3xl sm:text-4xl mt-4 mb-4"> SOURCE & CREDITS </h2>
         <p class="text-center text-xl mb-4"> You can find the source code of this site at <a href="https://github.com/itsarnob/itsarnob.github.io" class="text-rose-300 underline" target="_blank">this github repo.</a> The arrow & 'open external link' icons are from <a href="https://heroicons.com" class="text-rose-300 underline" target="_blank">Hero Icons.</a></p>        
@@ -205,7 +218,7 @@
                 py-2
               "
             >
-              <img src="/public/gh.png" class="w-6 mr-2" /> GitHub
+              <img src="/public/gh.png" class="w-6 mr-2" alt="GitHub logo"/> GitHub
               <svg
                 class="w-6 ml-1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -257,17 +270,5 @@
       
     </script>
   </body>
-  <style>
-    html {
-      scroll-behavior: smooth;
-      -webkit-tap-highlight-color: transparent;
-    }
 
-    #welcome-section h1,
-    #welcome-section p {
-      background: -webkit-linear-gradient(45deg, #059669, #7c3aed, #be185d);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  </style>
 </html>
