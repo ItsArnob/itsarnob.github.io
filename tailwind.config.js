@@ -20,6 +20,9 @@ module.exports = {
       colors: {
         rose: colors.rose
       },
+      boxShadow: {
+          link: "0 -2px 0 0 #059669 inset",
+      },
       gridTemplateColumns: {
         'projects': 'repeat(auto-fit, minmax(320px, 1fr))',
       },
