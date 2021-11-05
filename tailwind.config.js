@@ -23,6 +23,9 @@ module.exports = {
       boxShadow: {
           link: "0 -2px 0 0 #059669 inset",
       },
+      minHeight: {
+          home: "500px"
+      },
       gridTemplateColumns: {
         'projects': 'repeat(auto-fit, minmax(320px, 1fr))',
       },
