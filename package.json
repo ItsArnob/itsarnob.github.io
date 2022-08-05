@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/ItsArnob/itsarnob.github.io#readme",
   "dependencies": {
-    "tailwindcss": "^2.2.7"
+    "tailwindcss": "^3.1.7"
   }
 }
